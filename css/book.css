@@ -8,6 +8,9 @@
 
 /* styles */
 
+body{
+	background: #000004;
+}
 
 .gradient{
 	height:600px;

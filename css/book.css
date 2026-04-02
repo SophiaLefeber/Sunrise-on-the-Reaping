@@ -8,6 +8,7 @@
 
 /* styles */
 
+
 .gradient{
 	height:600px;
 	width: 405px;
@@ -59,7 +60,7 @@
 	background:url(../images/gold.jpg);
  	color:transparent;
  	background-clip:text;
-	transition: 0.5s;
+	transition: 0.4s;
 	filter: drop-shadow(0 0 1rem #000004);
 }
 
@@ -67,7 +68,7 @@
 	background:url(../images/gold.jpg);
  	color:transparent;
  	background-clip:text;
-	transition: 0.5s;
+	transition: 0.4s;
 	filter: drop-shadow(0 0 1rem #000004);
 }
 
@@ -80,14 +81,21 @@
 	position: absolute;
 	left: .5%;
 	top:10%;
-	transform: translate(-50%, -50%);
+	transform: rotate(10deg);
+	/* transform: translate(-50%, -50%); */
 	animation: spin 10s linear infinite;
+	animation-delay: 2.5s;
 	z-index: -2;
 }
 
+.gradient:hover .circle{
+	animation: spin 1s linear infinite;
+	transition: 0.5s;
+}
+
 @keyframes spin{
-	0% {transform: rotate(0);}
-	100% {transform: rotate(360deg);}
+	0% {transform: rotate(10);}
+	100% {transform: rotate(370deg);}
 }
 
 .striker{
@@ -97,7 +105,7 @@
 	left: 50%;
 	top:50%;
 	transform: translate(-50%, -50%);
-	animation: grow 4s ease-out forwards;
+	animation: grow 2s ease-out forwards;
 	animation-delay: .5s;
 }
 
@@ -115,8 +123,16 @@
 	transform: translate(-50%, -50%);
 	filter: drop-shadow(0 0 1rem #c86fb9);
 	z-index: -1;
-	animation: grow 4s ease-out forwards;
+	animation: grow 2s ease-out forwards;
 	animation-delay: .5s;
+}
+
+.gradient:hover .spikes{
+	filter: drop-shadow(0 0 1rem #790b0b);
+}
+
+.gradient:hover .striker{
+	filter: drop-shadow(0 0 1rem #790b0b);
 }
 
 
@@ -145,7 +161,7 @@
 	height: 50px;
 	overflow: hidden;
 	/* background-color: aquamarine; */
-	animation: type 4s steps(100) forwards;
+	animation: type 2s steps(100) forwards;
 	animation-delay: .5s;
 }
 
